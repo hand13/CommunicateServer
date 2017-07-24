@@ -21,7 +21,7 @@ public class ClientTest {
             return;
         }
         OutputStream out=socket.getOutputStream();
-        byte[] data="up\r韩祖耀\r韩鼎\r你好世界\n\r".getBytes("UTF-8");
+        byte[] data="up\rtest\rtest\rtest\n\r".getBytes("UTF-8");
         out.write(data);
         InputStream inputStream=socket.getInputStream();
         ByteArrayOutputStream oub=new ByteArrayOutputStream();
