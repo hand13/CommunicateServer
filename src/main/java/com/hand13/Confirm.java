@@ -13,7 +13,7 @@ import java.util.Map;
 public class Confirm {
     public static boolean update(String fname,String tname,String message)throws ClassNotFoundException,SQLException{
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/new?useSSL=false","hand13","2390129416");
+        Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/n数据库名?useSSL=false","用户名","密码");
         PreparedStatement statement=connection.prepareStatement("INSERT INTO users VALUES (NULL,?,?,?)");
         statement.setString(1,fname);
         statement.setString(2,tname);
@@ -24,7 +24,7 @@ public class Confirm {
     }
     public static ArrayList<String> down(String tname)throws ClassNotFoundException,SQLException{
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/new?useSSL=false","hand13","2390129416");
+        Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/数据库名?useSSL=false","用户名","密码");
         PreparedStatement statement=connection.prepareStatement("SELECT fname,message FROM users WHERE tname=?");
         statement.setString(1,tname);
         ResultSet resultSet=statement.executeQuery();
